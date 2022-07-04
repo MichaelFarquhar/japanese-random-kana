@@ -1,4 +1,4 @@
-export const alphabet = [
+const alphabet = [
     'a',
     'i',
     'u',
@@ -71,3 +71,7 @@ export const alphabet = [
     'wo',
     'n',
 ];
+
+export const getRandomCharacter = () => {
+    return alphabet[Math.floor(Math.random() * alphabet.length)];
+};

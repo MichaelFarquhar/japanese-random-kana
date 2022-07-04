@@ -1,27 +1,27 @@
-import { alphabet } from './alphabet';
+import { getRandomCharacter } from './alphabet';
 import { toHiragana, toKatakana } from 'wanakana';
-import { useState } from 'react';
 import { TypeMenu } from './TypeMenu';
 import { AnswerBox } from './AnswerBox';
 import './RandomKana.scss';
 
 // Recoil
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { DisplayType, answerIsShowingState, displayTypeState } from './atoms';
+import {
+    DisplayType,
+    answerIsShowingState,
+    displayTypeState,
+    characterState,
+} from './atoms';
 
 export const RandomKana = () => {
     const displayType = useRecoilValue(displayTypeState);
     const [showAnswer, setShowAnswer] = useRecoilState(answerIsShowingState);
 
-    function get_random(list: Array<string>) {
-        return list[Math.floor(Math.random() * list.length)];
-    }
-
-    const [char, setChar] = useState(get_random(alphabet));
+    const [char, setChar] = useRecoilState(characterState);
 
     const areaClick = () => {
         if (showAnswer) {
-            setChar(get_random(alphabet));
+            setChar(getRandomCharacter());
             setShowAnswer(false);
         } else {
             setShowAnswer(true);
@@ -51,7 +51,7 @@ export const RandomKana = () => {
             >
                 <p className="help-text">Click anywhere to randomize.</p>
                 <h1 className="character">{displayCharacter()}</h1>
-                <AnswerBox char={char} />
+                <AnswerBox />
             </div>
         </main>
     );

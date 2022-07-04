@@ -1,12 +1,22 @@
 import { useRecoilValue } from 'recoil';
-import { answerIsShowingState } from '../atoms';
+import { toHiragana, toKatakana } from 'wanakana';
+import {
+    DisplayType,
+    answerIsShowingState,
+    characterState,
+    displayTypeState,
+} from '../atoms';
 
-interface Props {
-    char: string;
-}
-
-export const AnswerBox = ({ char }: Props) => {
+export const AnswerBox = () => {
     const showAnswer = useRecoilValue(answerIsShowingState);
+    const char = useRecoilValue(characterState);
+    const displayType = useRecoilValue(displayTypeState);
 
-    return <div className={`answer ${showAnswer ? 'show' : ''}`}>{char}</div>;
+    return (
+        <div className={`answer ${showAnswer ? 'show' : ''}`}>
+            {displayType === DisplayType.Romaji
+                ? `${toHiragana(char)} ${toKatakana(char)}`
+                : char}
+        </div>
+    );
 };
