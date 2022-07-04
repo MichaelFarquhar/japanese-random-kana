@@ -1,0 +1,1 @@
+export { TypeMenu } from './TypeMenu';

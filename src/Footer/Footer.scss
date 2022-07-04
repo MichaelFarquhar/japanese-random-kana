@@ -1,0 +1,14 @@
+footer {
+    background: white;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    width: 100%;
+}
+
+.footer {
+    &__seperator {
+        margin: 0 1em;
+    }
+}

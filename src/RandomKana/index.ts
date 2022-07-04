@@ -1,0 +1,1 @@
+export { RandomKana } from './RandomKana';

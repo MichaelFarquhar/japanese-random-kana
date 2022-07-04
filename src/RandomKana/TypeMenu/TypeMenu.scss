@@ -1,0 +1,27 @@
+.type-menu {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+
+    &__item {
+        background: white;
+        padding: 0.5em 1em;
+        border-radius: 12px;
+        line-height: 1;
+        transition: 150ms;
+
+        &:hover {
+            cursor: pointer;
+            background: lighten(#58b4ff, 25);
+        }
+
+        &--active {
+            background: #58b4ff;
+
+            &:hover {
+                cursor: inherit;
+                background: #58b4ff;
+            }
+        }
+    }
+}
