@@ -72,6 +72,4 @@ const alphabet = [
     'n',
 ];
 
-export const getRandomCharacter = () => {
-    return alphabet[Math.floor(Math.random() * alphabet.length)];
-};
+export default alphabet;

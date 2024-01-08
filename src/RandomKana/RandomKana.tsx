@@ -1,4 +1,5 @@
-import { getRandomCharacter } from './alphabet';
+import alphabet from './alphabet';
+import { choiceFromArray } from './choiceFromArray';
 import { toHiragana, toKatakana } from 'wanakana';
 import { TypeMenu } from './TypeMenu';
 import { AnswerBox } from './AnswerBox';
@@ -21,7 +22,7 @@ export const RandomKana = () => {
 
     const areaClick = () => {
         if (showAnswer) {
-            setChar(getRandomCharacter());
+            setChar(choiceFromArray(alphabet));
             setShowAnswer(false);
         } else {
             setShowAnswer(true);
