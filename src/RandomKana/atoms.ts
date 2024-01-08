@@ -1,5 +1,6 @@
 import { atom } from 'recoil';
-import { getRandomCharacter } from './alphabet';
+import { choiceFromArray } from './choiceFromArray';
+import alphabet from './alphabet';
 
 export enum DisplayType {
     Hiragana,
@@ -22,5 +23,5 @@ export const answerIsShowingState = atom<boolean>({
 // Random character selected from alphabet
 export const characterState = atom<string>({
     key: 'characterState',
-    default: getRandomCharacter(),
+    default: choiceFromArray(alphabet),
 });
