@@ -3,7 +3,6 @@ import { choiceFromArray } from './choiceFromArray';
 import { toHiragana, toKatakana } from 'wanakana';
 import { TypeMenu } from './TypeMenu';
 import { AnswerBox } from './AnswerBox';
-import './RandomKana.scss';
 
 // Recoil
 import { useRecoilState, useRecoilValue } from 'recoil';
@@ -43,15 +42,19 @@ export const RandomKana = () => {
     };
 
     return (
-        <main>
+        <main className="flex-1 mt-10 text-center select-none w-full">
             <TypeMenu />
             <div
-                className="clickable-area"
+                className="h-['95%'] hover:cursor-pointer"
                 style={{ height: '95%' }}
                 onClick={() => areaClick()}
             >
-                <p className="help-text">Click anywhere to randomize.</p>
-                <h1 className="character">{displayCharacter()}</h1>
+                <p className="mt-8 text-gray-500 text-center">
+                    Click anywhere to randomize.
+                </p>
+                <h1 className="text-gray-600 font-bold text-[7.5rem] mt-8 mb-2">
+                    {displayCharacter()}
+                </h1>
                 <AnswerBox />
             </div>
         </main>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 import { DisplayType, displayTypeState } from '../atoms';
-import './TypeMenu.scss';
 import { TypeMenuItem } from './TypeMenuItem';
 
 export const TypeMenu = () => {
@@ -9,7 +8,7 @@ export const TypeMenu = () => {
 
     return (
         <React.Fragment>
-            <div className="type-menu">
+            <div className="flex justify-center gap-4">
                 <TypeMenuItem
                     label="Hiragana"
                     type={DisplayType.Hiragana}

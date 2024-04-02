@@ -13,7 +13,11 @@ export const AnswerBox = () => {
     const displayType = useRecoilValue(displayTypeState);
 
     return (
-        <div className={`answer ${showAnswer ? 'show' : ''}`}>
+        <div
+            className={`opacity-0 inline text-2xl font-semibold rounded-lg bg-[#d7ffd2] px-4 py-2 ${
+                showAnswer ? 'transition opacity-100' : ''
+            }`}
+        >
             {displayType === DisplayType.Romaji
                 ? `${toHiragana(char)} ${toKatakana(char)}`
                 : char}

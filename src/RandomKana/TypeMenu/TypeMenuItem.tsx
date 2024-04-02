@@ -18,7 +18,8 @@ export const TypeMenuItem = ({ label, active, type }: Props) => {
 
     return (
         <div
-            className={`type-menu__item ${active ? 'type-menu__item--active' : ''}`}
+            className={`cursor-pointer bg-white py-2 px-4 rounded-lg transition`}
+            style={{ background: active ? '#58b4ff' : 'white' }}
             onClick={() => menuItemClick()}
         >
             {label}
