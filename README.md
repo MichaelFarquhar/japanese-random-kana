@@ -1,5 +1,8 @@
 # Japanese Random Kana
 
+> [!NOTE]
+> The project has recently been migrated from [Create React App, NPM and Sass] -> [Vite, PNPM and Tailwind]
+
 [Live Demo on Netlify](https://japanese-random-kana.netlify.app/)
 
 A web app that will randomly generate Japanese hiragana, katakana, and romaji to be used as a quiz for Japanese language learning. Simply click the screen to generate a new character and click again to see the answer.
