@@ -4,21 +4,21 @@
 
 @font-face {
     font-family: 'Nunito';
-    src: url('./fonts/Nunito-VariableFont_wght.ttf') format('truetype');
-    font-weight: normal;
+    src: url('./assets/fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+    font-weight: 200 1000;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Comic Neue';
-    src: url('./fonts/ComicNeue-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/ComicNeue-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Comic Neue';
-    src: url('./fonts/ComicNeue-Bold.ttf') format('truetype');
+    src: url('./assets/fonts/ComicNeue-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
