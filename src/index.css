@@ -45,17 +45,3 @@ body,
     align-items: center;
     justify-content: space-between;
 }
-
-a {
-    color: #58b4ff;
-    text-decoration: none;
-    transition: 150ms;
-}
-
-a:active {
-    color: #3da8ff;
-}
-
-a:hover {
-    color: #3da8ff;
-}
