@@ -4,12 +4,20 @@ import './index.css';
 import App from './App';
 import { RecoilRoot } from 'recoil';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { NotFound } from './NotFound';
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
     <React.StrictMode>
-        <RecoilRoot>
-            <App />
-        </RecoilRoot>
+        <Router>
+            <RecoilRoot>
+                <Routes>
+                    <Route path="/" element={<App />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </RecoilRoot>
+        </Router>
     </React.StrictMode>
 );
