@@ -1,0 +1,3 @@
+[build]
+  publish = "dist" # Change this to your Vite build output directory
+  command = "pnpm run build"
