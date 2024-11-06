@@ -8,7 +8,10 @@ export const TypeMenu = () => {
 
     return (
         <React.Fragment>
-            <div className="flex justify-center gap-4">
+            <div
+                className="flex justify-center gap-4 w-max mx-auto"
+                data-component="type-menu"
+            >
                 <TypeMenuItem
                     label="Hiragana"
                     type={DisplayType.Hiragana}

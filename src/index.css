@@ -35,7 +35,6 @@ body,
 #root,
 .App {
     height: 100%;
-    user-select: none;
 }
 
 .App {
