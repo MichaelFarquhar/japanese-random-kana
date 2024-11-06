@@ -12,12 +12,17 @@ import {
     displayTypeState,
     characterState,
 } from './atoms';
+import useSpaceKey from '../hooks/useSpaceKey';
 
 export const RandomKana = () => {
     const displayType = useRecoilValue(displayTypeState);
     const [showAnswer, setShowAnswer] = useRecoilState(answerIsShowingState);
 
     const [char, setChar] = useRecoilState(characterState);
+
+    useSpaceKey(() => {
+        areaClick();
+    });
 
     const areaClick = () => {
         if (showAnswer) {
@@ -50,7 +55,11 @@ export const RandomKana = () => {
                 onClick={() => areaClick()}
             >
                 <p className="mt-8 text-gray-500 text-center">
-                    Click anywhere to randomize.
+                    Click anywhere or{' '}
+                    <kbd className="px-4 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg">
+                        Spacebar
+                    </kbd>{' '}
+                    to randomize.
                 </p>
                 <h1 className="text-gray-600 font-bold text-[7.5rem] mt-8 mb-2">
                     {displayCharacter()}
