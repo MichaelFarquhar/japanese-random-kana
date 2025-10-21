@@ -1,46 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 @font-face {
-    font-family: 'Nunito';
-    src: url('./assets/fonts/Nunito-VariableFont_wght.woff2') format('woff2');
-    font-weight: 200 1000;
-    font-style: normal;
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito-VariableFont_wght.woff2') format('woff2');
+  font-weight: 200 1000;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Comic Neue';
-    src: url('./assets/fonts/ComicNeue-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Comic Neue';
+  src: url('./assets/fonts/ComicNeue-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Comic Neue';
-    src: url('./assets/fonts/ComicNeue-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Comic Neue';
+  src: url('./assets/fonts/ComicNeue-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
 }
 
 html,
 body,
 #root,
 .App {
-    height: 100%;
+  height: 100%;
 }
 
 .App {
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
