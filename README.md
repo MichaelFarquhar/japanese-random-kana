@@ -11,6 +11,32 @@ A web app that will randomly generate Japanese hiragana, katakana, and romaji to
 
 For hiragana and katakana, when you click the screen a second time, it will show the romaji for the given character. If you choose to show romaji first, it will instead show both kana on the second click.
 
+## 📱 Progressive Web App (PWA)
+
+This web app is a **Progressive Web App** with full offline support! Once installed, you can use it without an internet connection.
+
+### Features:
+
+- ✅ **Offline Support** - Works completely offline after first visit
+- ✅ **Installable** - Can be downloaded and added to your home screen
+- ✅ **App-like Experience** - Runs as a standalone app on mobile and desktop
+
+### How to Install:
+
+**On Mobile (iOS/Android):**
+
+1. Visit the site in your mobile browser
+2. Look for the "Add to Home Screen" prompt, or
+3. Tap the browser menu (⋮ or ☰) and select "Add to Home Screen" / "Install App"
+
+**On Desktop (Chrome/Edge):**
+
+1. Visit the site in your browser
+2. Click the install icon (➕) in the address bar, or
+3. Look for the install prompt and click "Install"
+
+Once installed, the app will work offline and can be launched like any native app!
+
 ## 💻 Local Installation
 
 ```bash
