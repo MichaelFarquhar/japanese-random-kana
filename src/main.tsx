@@ -1,23 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { RouterProvider, createRouter } from '@tanstack/react-router';
 import './index.css';
-import App from './App';
-import { Provider } from 'jotai';
+import { routeTree } from './routeTree.gen';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { NotFound } from './NotFound';
+// Create the router instance
+const router = createRouter({
+  routeTree,
+  defaultNotFoundComponent: () => {
+    // Redirect unmatched routes to home
+    window.location.href = '/';
+    return null;
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <Router>
-      <Provider>
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Provider>
-    </Router>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
