@@ -14,5 +14,8 @@ export const displayTypeState = atom<DisplayType>(DisplayType.Hiragana);
 // Whether or not the answer is showing for the current character
 export const answerIsShowingState = atom<boolean>(false);
 
+// Whether or not sound is muted
+export const soundMutedState = atom<boolean>(false);
+
 // Random character selected from alphabet
 export const characterState = atom<string>(choiceFromArray(alphabet));

@@ -1,11 +1,25 @@
+import { useEffect } from 'react';
 import { useAtomValue } from 'jotai';
 import { toHiragana, toKatakana } from 'wanakana';
-import { DisplayType, answerIsShowingState, characterState, displayTypeState } from '../atoms';
+import { DisplayType, answerIsShowingState, characterState, displayTypeState, soundMutedState } from '../atoms';
+import useSpeakJapanese from '../../hooks/useSpeakJapanese';
 
 export const AnswerBox = () => {
   const showAnswer = useAtomValue(answerIsShowingState);
   const char = useAtomValue(characterState);
   const displayType = useAtomValue(displayTypeState);
+  const isMuted = useAtomValue(soundMutedState);
+
+  const { speak } = useSpeakJapanese(DisplayType.Hiragana ? toHiragana(char) : toKatakana(char), {
+    enabled: !isMuted,
+  });
+
+  // Speak when the answer is shown
+  useEffect(() => {
+    if (showAnswer) {
+      speak();
+    }
+  }, [showAnswer, speak]);
 
   return (
     <div
